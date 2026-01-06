@@ -26,9 +26,10 @@ A mobile application developed in Flutter to quickly and easily calculate your B
 ## 📸 Screenshots
 
 <p align="center">
-  <p align="center">
   <img src="https://raw.githubusercontent.com/CarlosM1024/IMC_Calculator_Flutter/main/assets/screenshots/img.png" width="250"/>
   <img src="https://raw.githubusercontent.com/CarlosM1024/IMC_Calculator_Flutter/main/assets/screenshots/img_1.png" width="250"/>
+  <img src="https://raw.githubusercontent.com/CarlosM1024/IMC_Calculator_Flutter/main/assets/screenshots/img_2.png" width="250"/>
+  <img src="https://raw.githubusercontent.com/CarlosM1024/IMC_Calculator_Flutter/main/assets/screenshots/img_3.png" width="250"/>
 </p>
 
 ---
@@ -59,7 +60,7 @@ cd IMC_Calculator_Flutter
 ```bash
 flutter pub get
 ```
-4. **Run the application** :
+4. **Run the main.dart file** :
 ````bash
 flutter run
 ````
@@ -69,16 +70,11 @@ flutter run
 The project is organized to separate logic, UI, and reusable components:
 ````grapgql 
 lib/
-├── 📄 main.dart                 # Punto de entrada y configuración del tema
-├── 📂 pages/                    # Pantallas (Rutas)
-│   ├── 🏠 input_page.dart       # Pantalla principal para entrada de datos
-│   └── 📊 results_page.dart     # Muestra el IMC calculado
-├── 📂 widgets/                  # Componentes de UI reutilizables
-│   ├── 🔘 round_icon_btn.dart   # Botones circulares personalizados (+/-)
-│   ├── 🗂️ reusable_card.dart    # Contenedor estándar para entradas
-│   └── ⬇️ bottom_button.dart    # Botones de acción grandes
-└── 📂 utils/                    # Lógica y ayudantes
-    └── 🧠 calculator_brain.dart # Lógica de cálculo e interpretación del IMC
+├── 📄 main.dart                 # Punto de entrada e inicialización de la aplicación
+├── 📂 app/                      
+│   └──  🏠 MiAplicacion.dart    # Configuración de la pantalla
+└── 📂 screen/                   
+    └── 📊 pantalla_01.dart      # Lógica de cálculo y visualizacion del IMC
 ````
 
 ---
