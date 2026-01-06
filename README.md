@@ -1,33 +1,106 @@
-# 📱 Flutter Mobile Application IMC Calculator
+# 📱 BMI Calculator - Flutter App
 
-The frontend of the system, designed to provide a smooth user experience for monitoring environmental data.
+A mobile application developed in Flutter to quickly and easily calculate your Body Mass Index (BMI). Designed with a clean and intuitive interface.
+
+---
 
 ## ✨ Features
-* **Real-time Sync**: Uses `Firebase Animated List` or `Streams` for instant updates.
-* **Clean UI**: Minimalist design focused on readability.
-* **Global Access**: Since it uses Firebase, you can check your sensor from any network.
+
+- ⚡ **Instant BMI Calculation**  
+  Enter your height and weight to get your BMI immediately.
+
+- 🩺 **BMI Classification**  
+  Displays weight category results (Underweight, Normal, Overweight, Obese) based on **WHO standards**.
+
+- 🎨 **Clean & User-Friendly UI**  
+  Minimalist design with reusable components for better UX.
+
+- ✅ **Input Validation**  
+  Prevents invalid or null values to ensure accurate calculations.
+
+- 🌍 **Cross-Platform Support**  
+  Compatible with **Android**, **Windows**, **Linux**, and **Web** (if enabled).
+
+---
+
+## 📸 Screenshots
+
+<p align="center">
+  <p align="center">
+  <img src="https://raw.githubusercontent.com/CarlosM1024/IMC_Calculator_Flutter/main/assets/screenshots/img.png" width="250"/>
+  <img src="https://raw.githubusercontent.com/CarlosM1024/IMC_Calculator_Flutter/main/assets/screenshots/img_1.png" width="250"/>
+</p>
+
+---
 
 ## 🚀 Getting Started
 
+Follow these instructions to get a copy of the project and run it on your local machine.
+
 ### Prerequisites
-* Flutter SDK installed ([Guide](https://docs.flutter.dev/get-started/install)).
-* An Android/iOS emulator or physical device.
 
-### Setup Firebase
-1.  Create a project in the [Firebase Console](https://console.firebase.google.com/).
-2.  Add an Android/iOS app to your Firebase project.
-3.  Download the `google-services.json` (Android) or `GoogleService-Info.plist` (iOS) and place them in the correct directories:
-    * `android/app/`
-    * `ios/Runner/`
+* [Flutter SDK](https://docs.flutter.dev/get-started/install) installed.
 
-### Running the App
+* An Android/iOS emulator or a connected physical device.
+
+* A code editor (VS Code, Android Studio, etc.).
+
+### Installation
+
+1. **Clone the repository** :
 ```bash
-# Install dependencies
-flutter pub get
-
-# Run the application
-flutter run
+git clone https://github.com/CarlosM1024/IMC_Calculator_Flutter.git
 ```
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+2. **Navigate to the project directory**:
+```bash
+cd IMC_Calculator_Flutter
+```
+3. **Install dependencies** :
+```bash
+flutter pub get
+```
+4. **Run the application** :
+````bash
+flutter run
+````
+---
+## 🛠️ Project Structure
+
+The project is organized to separate logic, UI, and reusable components:
+````grapgql 
+lib/
+├── 📄 main.dart                 # Punto de entrada y configuración del tema
+├── 📂 pages/                    # Pantallas (Rutas)
+│   ├── 🏠 input_page.dart       # Pantalla principal para entrada de datos
+│   └── 📊 results_page.dart     # Muestra el IMC calculado
+├── 📂 widgets/                  # Componentes de UI reutilizables
+│   ├── 🔘 round_icon_btn.dart   # Botones circulares personalizados (+/-)
+│   ├── 🗂️ reusable_card.dart    # Contenedor estándar para entradas
+│   └── ⬇️ bottom_button.dart    # Botones de acción grandes
+└── 📂 utils/                    # Lógica y ayudantes
+    └── 🧠 calculator_brain.dart # Lógica de cálculo e interpretación del IMC
+````
+
+---
+
+## 🧮 Formula Used
+
+The application uses the standard **Body Mass Index (BMI)** formula recommended by the  
+**World Health Organization (WHO)**:
+
+**BMI = weight (kg) / [height (m)]²**
+
+| Parameter | Unit | Description |
+|----------|------|-------------|
+| **Weight** | Kilograms (kg) | Body mass of the individual |
+| **Height** | Meters (m) | Height of the individual |
+
+> **Note:** If height is entered in centimeters, the application automatically converts it to meters before performing the calculation.
+
+---
+
+## 👤 Author
+
+**Carlos Antonio Martinez Miranda**
+
+GitHub: [@CarlosM1024](https://github.com/CarlosM1024)
